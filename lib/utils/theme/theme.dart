@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:t_store/utils/theme/textTheme.dart';
-import 'package:t_store/utils/theme/elevatedButtonTheme.dart';
-import 'package:t_store/utils/theme/appbar_theme.dart';
-import 'package:t_store/utils/theme/bottom_sheets_theme.dart';
+import 'package:t_store/utils/theme/custom_themes/text_theme.dart';
+import 'package:t_store/utils/theme/custom_themes/elevated_button_theme.dart';
+import 'package:t_store/utils/theme/custom_themes/appbar_theme.dart';
+import 'package:t_store/utils/theme/custom_themes/bottom_sheets_theme.dart';
 import 'package:t_store/utils/theme/custom_themes/checkbox_theme.dart';
 import 'package:t_store/utils/theme/custom_themes/chip_theme.dart';
 import 'package:t_store/utils/theme/custom_themes/outline_button_theme.dart';
+import 'package:t_store/utils/theme/custom_themes/text_field_theme.dart';
 
 class TAppTheme {
  TAppTheme._();
@@ -20,11 +21,11 @@ class TAppTheme {
     textTheme: TTextTheme.lightTextTheme,
     elevatedButtonTheme: TElevatedButtonTheme.LightElevatedButtonTheme,
     appBarTheme: TAppBarTheme.LightAppBarTheme,
-    bottomSheetTheme: TBottomSheetTheme.LightBottomSheetTheme,
+    bottomSheetTheme: TBottomSheetsTheme.LightBottomSheetTheme,
     checkboxTheme: TCheckboxTheme.LightCheckboxTheme,
     chipTheme: TChipTheme.LightChipTheme,
-    outlinedbuttonTheme: TOutlinedButtonTheme.LightOutlinedButtonTheme,
-    textFieldTheme: TTextFieldTheme.LightInputDecorationTheme
+    outlinedButtonTheme: TOutlinedButtonTheme.LightOutlinedButtonTheme,
+    inputDecorationTheme: TTextFieldTheme.LightInputDecorationTheme
  );
 
  static ThemeData darkTheme = ThemeData(
@@ -34,13 +35,13 @@ class TAppTheme {
     primaryColor: Colors.blue,
     scaffoldBackgroundColor: Colors.white,
     //cardColor: Colors.grey[200],
-    textTheme: TTextTheme.DarkTextTheme,
+    textTheme: TTextTheme.darkTextTheme,
     elevatedButtonTheme: TElevatedButtonTheme.DarkElevatedButtonTheme,
     appBarTheme: TAppBarTheme.DarkAppBarTheme,
-    bottomSheetTheme: TBottomSheetTheme.DarkBottomSheetTheme,
+    bottomSheetTheme: TBottomSheetsTheme.DarkBottomSheetTheme,
     checkboxTheme: TCheckboxTheme.DarkCheckboxTheme,
     chipTheme: TChipTheme.DarkChipTheme,
-    outlinedbuttonTheme: TOutlinedButtonTheme.DarkOutlinedButtonTheme,
+    outlinedButtonTheme: TOutlinedButtonTheme.DarkOutlinedButtonTheme,
     inputDecorationTheme: TTextFieldTheme.DarkInputDecorationTheme
- )
+ );
 }

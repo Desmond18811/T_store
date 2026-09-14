@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class TCheckboxTheme{
     TCheckboxTheme._();
 
-    static const LightCheckboxTheme = CheckboxThemeData(
+    static final LightCheckboxTheme = CheckboxThemeData(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
         checkColor: MaterialStateProperty.resolveWith((states) {
             if (states.contains(MaterialState.selected)){
@@ -22,7 +22,7 @@ class TCheckboxTheme{
         
     );
 
-    static const DarkCheckboxTheme = CheckboxThemeData(
+    static final DarkCheckboxTheme = CheckboxThemeData(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
         checkColor: MaterialStateProperty.resolveWith((states) {
             if (states.contains(MaterialState.selected)){

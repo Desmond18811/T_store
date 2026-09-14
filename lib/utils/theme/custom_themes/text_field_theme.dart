@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-class TTextFormFieldTheme{
-    TTextFormFieldTheme._();
+class TTextFieldTheme{
+    TTextFieldTheme._();
 
-    static const LightInputDecorationTheme = InputDecorationTheme(
+    static final LightInputDecorationTheme = InputDecorationTheme(
       errorMaxLines: 3,
       prefixIconColor: Colors.grey,
       suffixIconColor: Colors.grey,
@@ -18,7 +18,7 @@ class TTextFormFieldTheme{
         enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(14), borderSide: const BorderSide(color: Colors.grey, width: 1)),
     );
 
-    static const DarkInputDecorationTheme = InputDecorationTheme(
+    static final DarkInputDecorationTheme = InputDecorationTheme(
         errorMaxLines: 3,
         prefixIconColor: Colors.grey,
         suffixIconColor: Colors.grey,
