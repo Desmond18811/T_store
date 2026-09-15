@@ -10,7 +10,7 @@ class TTextTheme {
     headlineLarge: const TextStyle().copyWith(
         fontSize: 32.0, fontWeight: FontWeight.bold, color: TColors.dark),
     headlineMedium: const TextStyle().copyWith(
-        fontSize: 18.0, fontWeight: FontWeight.w600, color: TColors.dark),
+        fontSize: 24.0, fontWeight: FontWeight.w600, color: TColors.dark),
     headlineSmall: const TextStyle().copyWith(
         fontSize: 18.0, fontWeight: FontWeight.w600, color: TColors.dark),
     titleLarge: const TextStyle().copyWith(

@@ -3,13 +3,16 @@ import 'package:t_store/utils/constants/sizes.dart';
 import 'package:t_store/utils/helpers/helper_functions.dart';
 
 class OnBoardingPage extends StatelessWidget {
+  // one onboarding slide: image + title + subtitle
   const OnBoardingPage(
       {super.key,
       required this.image,
       required this.title,
       required this.subTitle});
 
-  final String image, title, subTitle;
+  final String image,
+      title,
+      subTitle; // data passed in by whoever creates this widget
 
   @override
   Widget build(BuildContext context) {
@@ -18,18 +21,20 @@ class OnBoardingPage extends StatelessWidget {
       child: Column(
         children: [
           Image(
-            width: THelperFunctions.screenWidth() * 0.8,
+            width: THelperFunctions.screenWidth() *
+                0.8, // scales to the actual device
             height: THelperFunctions.screenHeight() * 0.6,
-            image: AssetImage(image),
+            image: AssetImage(
+                image), // uses this widget's own field, not a hardcoded path
           ),
           Text(
-            title,
+            title, // uses this widget's own field
             style: Theme.of(context).textTheme.headlineMedium,
             textAlign: TextAlign.center,
           ),
           const SizedBox(height: TSizes.spaceBtwItems),
           Text(
-            subTitle,
+            subTitle, // uses this widget's own field
             style: Theme.of(context).textTheme.bodyMedium,
             textAlign: TextAlign.center,
           ),
