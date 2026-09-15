@@ -29,6 +29,10 @@ dependencies:
   lottie: ^3.5.1
   firebase_storage: ^13.5.0
 
+  # UI Widgets
+  smooth_page_indicator: ^1.2.0
+
+
   # Product Specific
 
   #------------------ ./ PACKAGES END ------------------#
