@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/src/extension_navigation.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:t_store/features/authentication/screens/verify_email.dart';
+import 'package:t_store/features/authentication/screens/forgot_password.dart';
+import 'package:t_store/features/authentication/screens/signup.dart';
+import 'package:t_store/naviagtion_menu.dart';
 import 'package:t_store/utils/constants/sizes.dart';
 import 'package:t_store/utils/constants/text_strings.dart';
 
@@ -44,7 +46,8 @@ class TLoginForm extends StatelessWidget {
                   ],
                 ),
                 TextButton(
-                    onPressed: () {}, child: const Text(TTexts.forgetPassword)),
+                    onPressed: () => Get.to(() => const ForgotPasswordScreen()),
+                    child: const Text(TTexts.forgetPassword)),
               ],
             ),
             const SizedBox(height: TSizes.spaceBtwSections),
@@ -53,7 +56,7 @@ class TLoginForm extends StatelessWidget {
             SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                    onPressed: () => Get.to(() => const VerifyEmailScreen()),
+                    onPressed: () => Get.to(() => const NavigationMenu()),
                     child: const Text(TTexts.signIn))),
             const SizedBox(height: TSizes.spaceBtwItems),
 
@@ -61,7 +64,7 @@ class TLoginForm extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: OutlinedButton(
-                onPressed: () => Get.to(() => const VerifyEmailScreen()),
+                onPressed: () => Get.to(() => const SignUpScreen()),
                 child: const Text(TTexts.createAccount),
               ),
             ),

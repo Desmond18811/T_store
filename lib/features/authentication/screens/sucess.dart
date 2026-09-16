@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:t_store/utils/constants/sizes.dart';
-import 'package:t_store/utils/constants/text_strings.dart';
-import 'package:t_store/utils/helpers/helper_functions.dart';
+import 'package:t_store/features/authentication/contollers.onboarding/widgets/success/success_content.dart';
 import 'package:t_store/utils/helpers/spacing_styles.dart';
 
 class SuccessScreen extends StatelessWidget {
@@ -23,35 +21,11 @@ class SuccessScreen extends StatelessWidget {
         body: SingleChildScrollView(
           child: Padding(
             padding: TSpacingStyles.paddingWithAppBarHeight(),
-            child: Column(
-              children: [
-                ///Image
-                Image(
-                    image: AssetImage(image),
-                    width: THelperFunctions.screenWidth() * 0.6),
-                const SizedBox(height: TSizes.spaceBtwSections),
-
-                //Title
-                Text(title,
-                    style: Theme.of(context).textTheme.headlineMedium,
-                    textAlign: TextAlign.center),
-                //Subtitle
-                const SizedBox(height: TSizes.spaceBtwSections),
-                Text(
-                  subTitle,
-                  style: Theme.of(context).textTheme.labelMedium,
-                  textAlign: TextAlign.center,
-                ),
-                const SizedBox(height: TSizes.spaceBtwSections),
-
-                //Button
-                SizedBox(
-                  width: double.infinity,
-                  child: ElevatedButton(
-                      onPressed: onPressed,
-                      child: const Text(TTexts.tContinue)),
-                ),
-              ],
+            child: TSuccessContent(
+              image: image,
+              title: title,
+              subTitle: subTitle,
+              onPressed: onPressed,
             ),
           ),
         ));
