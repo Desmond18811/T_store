@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:t_store/features/authentication/contollers.onboarding/widgets/login/login_divider.dart';
-import 'package:t_store/features/authentication/contollers.onboarding/widgets/login/login_footer.dart';
+import 'package:get/get_utils/src/extensions/string_extensions.dart';
+import 'package:t_store/common/wigdets/login_signup/form_divider.dart';
+import 'package:t_store/common/wigdets/login_signup/social_buttons.dart';
 import 'package:t_store/features/authentication/contollers.onboarding/widgets/login/login_form.dart';
 import 'package:t_store/features/authentication/contollers.onboarding/widgets/login/login_header.dart';
 import 'package:t_store/utils/constants/sizes.dart';
+import 'package:t_store/utils/constants/text_strings.dart';
 import 'package:t_store/utils/helpers/spacing_styles.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -18,17 +20,20 @@ class LoginScreen extends StatelessWidget {
           child: Column(
             children: [
               /// Logo, Title & Sub-Title
-              TLoginHeader(),
+              const TLoginHeader(),
 
               /// Form
-              TLoginForm(),
+              const TLoginForm(),
 
               /// Divider
-              TFormDivider(),
+              TFormDivider(
+                dividerText: TTexts.orSignInWith.capitalize!,
+              ),
+
               const SizedBox(height: TSizes.spaceBtwSections),
 
               /// Footer
-              TSocialButtons(),
+              const TSocialButtons(),
             ],
           ),
         ),
