@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:t_store/features/authentication/screens/home.dart';
 import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/helpers/helper_functions.dart';
 
@@ -41,11 +42,9 @@ class NavigationController extends GetxController {
   final Rx<int> selectedIndex = 0.obs;
 
   final screens = [
+    const HomeScreen(),
     Container(
-      color: Colors.green, //const HomeScreen()
-    ),
-    Container(
-      color: Colors.blue,
+      color: Colors.green,
     ),
     Container(
       color: Colors.deepPurple,
