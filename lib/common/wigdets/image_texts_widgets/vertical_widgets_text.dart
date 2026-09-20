@@ -57,6 +57,7 @@ class TVerticalText extends StatelessWidget {
                     .textTheme
                     .labelMedium!
                     .apply(color: textColor),
+                textAlign: TextAlign.center,
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
               ),

@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:t_store/common/wigdets/image_texts_widgets/vertical_widgets_text.dart';
 import 'package:t_store/utils/constants/colors.dart';
-import 'package:t_store/utils/constants/image_strings.dart';
 
 class THomeCategories extends StatelessWidget {
-  const THomeCategories({
-    super.key,
-  });
+  const THomeCategories({super.key, required this.image, required this.title});
+
+  final List<String> image;
+
+  final List<String> title;
 
   @override
   Widget build(BuildContext context) {
@@ -18,8 +19,8 @@ class THomeCategories extends StatelessWidget {
           scrollDirection: Axis.horizontal,
           itemBuilder: (_, index) {
             return TVerticalText(
-              image: TImages.shoeIcon,
-              title: 'Shoes',
+              image: image[index],
+              title: title[index],
               textColor: TColors.white,
               onTap: () {},
             );

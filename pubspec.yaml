@@ -31,6 +31,7 @@ dependencies:
 
   # UI Widgets
   smooth_page_indicator: ^1.2.0
+  carousel_slider: ^5.0.0
 
 
   # Product Specific
