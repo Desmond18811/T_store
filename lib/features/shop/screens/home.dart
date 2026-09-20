@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:t_store/common/wigdets/container/primary_header_container.dart';
+import 'package:t_store/common/wigdets/layout%20/grid_layout.dart';
+import 'package:t_store/features/authentication/contollers.onboarding/widgets/products_cards/products_card_vertical.dart';
 import 'package:t_store/features/shop/widgets/home_app_bar.dart';
 import 'package:t_store/common/wigdets/search_bar/search_container.dart';
 import 'package:t_store/common/wigdets/text_widgets/text_widgets.dart';
@@ -15,12 +17,12 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: SingleChildScrollView(
         child: Column(
           children: [
             //Header
-            TPrimaryHeaderContainer(
+            const TPrimaryHeaderContainer(
                 child: Column(
               children: [
                 THomeAppBar(),
@@ -80,14 +82,34 @@ class HomeScreen extends StatelessWidget {
               ],
             )),
 
-            //Body with caurosel slider too.
+            //Body Section
             Padding(
-              padding: EdgeInsets.all(TSizes.defaultSpace),
-              child: TPromoSlider(
-                banners: [
-                  TImages.promoBanner1,
-                  TImages.promoBanner2,
-                  TImages.promoBanner3
+              padding: const EdgeInsets.all(TSizes.defaultSpace),
+              child: Column(
+                children: [
+                  // Promo Slider
+                  const TPromoSlider(
+                    banners: [
+                      TImages.promoBanner1,
+                      TImages.promoBanner2,
+                      TImages.promoBanner3,
+                    ],
+                  ),
+                  const SizedBox(height: TSizes.spaceBtwSections),
+
+                  // Section Heading
+                  TSectionHeading(
+                    title: 'Popular Products',
+                    buttonTitle: 'See All',
+                    onPressed: () {},
+                  ),
+                  const SizedBox(height: TSizes.spaceBtwItems / 16),
+
+                  // Products Grid
+                  TGridLayout(
+                    itemCount: 4,
+                    itemBuilder: (_, index) => const TProductCardVertical(),
+                  ),
                 ],
               ),
             ),
