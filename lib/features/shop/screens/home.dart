@@ -3,11 +3,11 @@ import 'package:iconsax/iconsax.dart';
 import 'package:t_store/common/wigdets/container/primary_header_container.dart';
 import 'package:t_store/common/wigdets/layout%20/grid_layout.dart';
 import 'package:t_store/features/authentication/contollers.onboarding/widgets/products_cards/products_card_vertical.dart';
-import 'package:t_store/features/shop/widgets/home_app_bar.dart';
+import 'package:t_store/features/shop/widgets/home/home_app_bar.dart';
 import 'package:t_store/common/wigdets/search_bar/search_container.dart';
 import 'package:t_store/common/wigdets/text_widgets/text_widgets.dart';
-import 'package:t_store/features/shop/widgets/home_categories.dart';
-import 'package:t_store/features/shop/widgets/promo_slider.dart';
+import 'package:t_store/features/shop/widgets/home/home_categories.dart';
+import 'package:t_store/features/shop/widgets/home/promo_slider.dart';
 import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/constants/image_strings.dart';
 import 'package:t_store/utils/constants/sizes.dart';
@@ -29,7 +29,7 @@ class HomeScreen extends StatelessWidget {
                 SizedBox(height: TSizes.spaceBtwItems),
 
                 // Search Bar
-                TPaddingContainer(
+                TSearchContainer(
                   text: 'Search in Store',
                   icon: Iconsax.search_normal,
                 ),

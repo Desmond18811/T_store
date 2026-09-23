@@ -5,20 +5,22 @@ import 'package:t_store/utils/constants/sizes.dart';
 import 'package:t_store/utils/device/device_utility.dart';
 import 'package:t_store/utils/helpers/helper_functions.dart';
 
-class TPaddingContainer extends StatelessWidget {
-  const TPaddingContainer({
+class TSearchContainer extends StatelessWidget {
+  const TSearchContainer({
     super.key,
     required this.text,
     this.icon,
     this.showBackground = true,
     this.showBorder = true,
     this.onTap,
+    this.padding = const EdgeInsets.symmetric(horizontal: TSizes.defaultSpace),
   });
 
   final String text;
   final IconData? icon;
   final bool showBackground, showBorder;
   final VoidCallback? onTap;
+  final EdgeInsetsGeometry padding;
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +29,7 @@ class TPaddingContainer extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: TSizes.defaultSpace),
+        padding: padding,
         child: Container(
           width: TDeviceUtils.getScreenWidth(context),
           padding: const EdgeInsets.all(TSizes.md),
@@ -41,7 +43,7 @@ class TPaddingContainer extends StatelessWidget {
               border: showBorder ? Border.all(color: TColors.grey) : null),
           child: Row(
             children: [
-              Icon(Iconsax.search_normal, color: TColors.darkerGrey),
+              const Icon(Iconsax.search_normal, color: TColors.darkerGrey),
               const SizedBox(width: TSizes.spaceBtwItems),
               Text(
                 text,

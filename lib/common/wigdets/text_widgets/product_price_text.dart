@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/constants/sizes.dart';
 
 class TProductPriceText extends StatelessWidget {
@@ -13,7 +12,8 @@ class TProductPriceText extends StatelessWidget {
     this.textAlign = TextAlign.left,
   });
 
-  final String currencySign, price;
+  final String currencySign;
+  final int price;
   final bool isLarge;
   final bool lineThrough;
   final int maxLines;
@@ -24,7 +24,7 @@ class TProductPriceText extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(left: TSizes.sm),
       child: Text(
-        currencySign + price,
+        currencySign + price.toString(),
         maxLines: maxLines,
         overflow: TextOverflow.ellipsis,
         style: isLarge

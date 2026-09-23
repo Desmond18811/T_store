@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:t_store/utils/constants/colors.dart';
+import 'package:t_store/utils/helpers/helper_functions.dart';
 
 class TCartCounterIcon extends StatelessWidget {
   const TCartCounterIcon({
@@ -14,13 +15,14 @@ class TCartCounterIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final dark = THelperFunctions.isDarkMode(context);
     return Stack(
       children: [
         IconButton(
             onPressed: () {},
-            icon: const Icon(
+            icon: Icon(
               Iconsax.shopping_bag,
-              color: TColors.white,
+              color: dark ? TColors.white : TColors.black,
             )),
         Positioned(
           top: 0,
