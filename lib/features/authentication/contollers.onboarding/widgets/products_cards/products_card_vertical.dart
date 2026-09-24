@@ -50,7 +50,7 @@ class TProductCardVertical extends StatelessWidget {
                     top: 12,
                     child: TRoundedContainer(
                       radius: TSizes.sm,
-                      backgroundColor: TColors.secondary.withOpacity(0.8),
+                      backgroundColor: TColors.secondary.withValues(alpha: 0.8),
                       padding: const EdgeInsets.symmetric(
                           horizontal: TSizes.sm, vertical: TSizes.xs),
                       child: Text(
@@ -80,17 +80,17 @@ class TProductCardVertical extends StatelessWidget {
             const SizedBox(height: TSizes.spaceBtwItems / 2),
 
             /// -- Detailed Content (Title & Brand Name with Verification Checkmark)
-            Padding(
-              padding: const EdgeInsets.only(left: TSizes.sm),
+            const Padding(
+              padding: EdgeInsets.only(left: TSizes.sm),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   /// Product Title
-                  const TProductTitleText(
+                  TProductTitleText(
                     title: 'Sport Nike Air Max Shoes',
                     smallSize: true,
                   ),
-                  const SizedBox(height: TSizes.spaceBtwItems / 2),
+                  SizedBox(height: TSizes.spaceBtwItems / 2),
 
                   /// Brand Name & Verification Checkmark
                   TBrandTitleWithVerifiedIcon(

@@ -76,6 +76,7 @@ class HomeScreen extends StatelessWidget {
                           "Electronics"
                         ],
                       ),
+                      SizedBox(height: TSizes.spaceBtwItems)
                     ],
                   ),
                 ),

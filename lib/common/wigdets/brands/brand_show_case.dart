@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:t_store/common/styles/rounded_container.dart';
 import 'package:t_store/common/wigdets/brands/t_store_cards.dart';
 import 'package:t_store/utils/constants/colors.dart';
-import 'package:t_store/utils/constants/image_strings.dart';
 import 'package:t_store/utils/constants/sizes.dart';
 import 'package:t_store/utils/helpers/helper_functions.dart';
 

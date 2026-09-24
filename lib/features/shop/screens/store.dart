@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:t_store/common/styles/rounded_container.dart';
 import 'package:t_store/common/wigdets/app_bar/app_bar.dart';
 import 'package:t_store/common/wigdets/app_bar/tab_bar.dart';
-import 'package:t_store/common/wigdets/brands/brand_show_case.dart';
 import 'package:t_store/common/wigdets/cart_counter/cart_counter.dart';
 import 'package:t_store/common/wigdets/layout%20/grid_layout.dart';
 import 'package:t_store/common/wigdets/search_bar/search_container.dart';
@@ -10,7 +8,6 @@ import 'package:t_store/common/wigdets/text_widgets/text_widgets.dart';
 import 'package:t_store/common/wigdets/brands/t_store_cards.dart';
 import 'package:t_store/features/shop/widgets/store/category_tabs.dart';
 import 'package:t_store/utils/constants/colors.dart';
-import 'package:t_store/utils/constants/image_strings.dart';
 import 'package:t_store/utils/constants/sizes.dart';
 import 'package:t_store/utils/helpers/helper_functions.dart';
 
